@@ -1,0 +1,25 @@
+<section class="rk-section">
+  <%= render "resume/section_header", jp: "職務経歴", en: "EXPERIENCE", wide: true %>
+  <% experience.each do |job| %>
+    <div class="rk-exp">
+      <div class="rk-exp__head">
+        <div>
+          <div class="rk-exp__company"><%= job.company %></div>
+          <div class="rk-exp__role"><%= job.role %></div>
+        </div>
+        <div class="rk-exp__period"><%= job.period %></div>
+      </div>
+      <ul class="rk-exp__list">
+        <% job.bullets.each do |bullet| %>
+          <li class="rk-exp__item">
+            <span class="rk-exp__bullet"></span>
+            <span class="rk-exp__text"><%= raw bullet %></span>
+          </li>
+        <% end %>
+      </ul>
+      <% if job.note.present? %>
+        <div class="rk-exp__note"><%= job.note %></div>
+      <% end %>
+    </div>
+  <% end %>
+</section>

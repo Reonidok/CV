@@ -1,0 +1,11 @@
+<section class="rk-section">
+  <%= render "resume/section_header", jp: "その他", en: "ADDITIONAL" %>
+  <ul class="rk-additional">
+    <% items.each do |item| %>
+      <li class="rk-additional__item">
+        <span class="rk-additional__bullet"></span>
+        <span class="rk-additional__text"><%= raw item %></span>
+      </li>
+    <% end %>
+  </ul>
+</section>

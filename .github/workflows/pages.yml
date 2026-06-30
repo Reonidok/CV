@@ -1,0 +1,55 @@
+name: Deploy résumé to GitHub Pages
+
+# Builds the static résumé (dist/index.html) and publishes it to GitHub Pages.
+# One-time setup: repo Settings → Pages → Build and deployment → Source =
+# "GitHub Actions". Published URL: https://reonidok.github.io/CV/
+
+on:
+  push:
+    branches: [master, develop]
+  workflow_dispatch:
+
+# Permissions the deploy-pages action needs.
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow only one concurrent deployment; don't cancel an in-progress run.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.4.9"
+          bundler-cache: true
+
+      - name: Build static site
+        run: bin/rails static:build
+        env:
+          RAILS_ENV: production
+          SECRET_KEY_BASE: dummy # not used by the static build, but Rails boots in production
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

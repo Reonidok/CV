@@ -1,0 +1,8 @@
+<section class="rk-section">
+  <%= render "resume/section_header", jp: "専門領域", en: "DOMAIN" %>
+  <div class="rk-chips">
+    <% domain.each do |item| %>
+      <span class="rk-chip"><%= item %></span>
+    <% end %>
+  </div>
+</section>
