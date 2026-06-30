@@ -39,7 +39,7 @@ jobs:
           SECRET_KEY_BASE: dummy # not used by the static build, but Rails boots in production
 
       - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v5
         with:
           path: dist
 
