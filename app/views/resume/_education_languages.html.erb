@@ -1,0 +1,30 @@
+<div class="rk-cols">
+  <div>
+    <%= render "resume/section_header", jp: "学歴", en: "EDUCATION", line: false %>
+    <% resume.education.each do |edu| %>
+      <div class="rk-edu__item">
+        <div class="rk-edu__school"><%= edu.school %></div>
+        <div class="rk-edu__detail"><%= edu.detail %></div>
+      </div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= render "resume/section_header", jp: "言語", en: "LANGUAGES", line: false %>
+    <% resume.languages.each do |lang| %>
+      <div class="rk-lang__row">
+        <span class="rk-lang__name"><%= lang.name %> <span class="rk-lang__jp"><%= lang.jp %></span></span>
+        <span class="rk-lang__level"><%= lang.level %></span>
+      </div>
+    <% end %>
+
+    <% japanese = resume.japanese %>
+    <div class="rk-lang__title"><%= japanese.name %> <span class="rk-lang__jp"><%= japanese.jp %></span></div>
+    <div class="rk-jlpt">
+      <% japanese.jlpt.each do |cell| %>
+        <span class="rk-jlpt__cell rk-jlpt__cell--<%= cell.state %>"><%= cell.level %></span>
+      <% end %>
+    </div>
+    <div class="rk-lang__note"><%= raw japanese.note %></div>
+  </div>
+</div>

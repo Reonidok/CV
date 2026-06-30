@@ -1,0 +1,10 @@
+<div class="rk-footer">
+  <div class="rk-footer__inner">
+    <div class="rk-footer__ready"><%= contact.ready %><br><span class="rk-accent"><%= contact.ready_accent %></span> <%= contact.ready_jp %></div>
+    <div class="rk-footer__links">
+      <span>✉ <%= mail_to contact.email %></span>
+      <span><%= link_to "in/#{contact.linkedin}", "https://www.linkedin.com/in/#{contact.linkedin}", target: "_blank", rel: "noopener" %></span>
+    </div>
+    <div class="rk-footer__start"><%= contact.start %></div>
+  </div>
+</div>

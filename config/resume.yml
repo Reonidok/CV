@@ -1,0 +1,114 @@
+# Résumé content. Edit this file to update the CV — the views render from it.
+# Markup that contains inline <strong> emphasis is trusted (single-author CV)
+# and rendered raw by the views.
+
+name: "Leonid Kozhanov"
+name_lines: ["LEONID", "KOZHANOV"]
+role: "Full-stack Engineer · .NET / Angular"
+role_jp: "フルスタックエンジニア · バックエンド志向"
+
+window:
+  app: "leonid.exe"
+  app_jp: "履歴書"
+  route: "モスクワ → 東京"
+
+badges:
+  - { label: "Moscow, RU", color: "var(--blue)" }
+  - { label: "Relocating to Tokyo", color: "var(--accent)" }
+  - { label: "Visa-eligible (BSc)", color: "" }
+
+summary: >-
+  Full-stack Engineer with 3 years of experience building business-critical
+  financial systems in production. Specialized in enterprise integration
+  (REST/SOAP) with Tier-1 banks, fuel-card networks, and insurance providers,
+  where data accuracy and audit traceability are mandatory. Comfortable
+  maintaining and modernizing long-running systems — both legacy and
+  greenfield. Currently studying Japanese (N5→N4, targeting N3 within 12
+  months) and preparing for relocation to Tokyo, with the goal of contributing
+  to a Japanese engineering team long-term.
+
+domain:
+  - "Financial systems"
+  - "Enterprise B2B integration"
+  - "Audit-compliant transactions"
+  - "Fuel & energy sector"
+  - "Banking & insurance"
+  - "Long-running production systems"
+
+skills:
+  - title: "BACKEND"
+    items: ["C# / .NET 10", "EF Core 10", "Hangfire", "Serilog", "RabbitMQ", "REST/SOAP"]
+  - title: "FRONTEND"
+    items: ["Angular 21", "TypeScript", "RxJS", "@ngrx/signals"]
+  - title: "DATABASES"
+    items: ["MS SQL Server (AG + HADR)", "PostgreSQL", "MongoDB"]
+  - title: "DEVOPS"
+    items: ["Docker", "Kubernetes", "Azure DevOps", "TFS", "Linux"]
+  - title: "PRACTICES"
+    items: ["Idempotent APIs", "Audit logging", "Transaction versioning", "NUnit", "Code review"]
+  - title: "MONITORING & LEARNING"
+    items: ["Zabbix", "Structured logging"]
+    learning: ["Go", "Rust"]
+
+working_style: >-
+  Strong written communication and detailed documentation habits. Comfortable
+  with structured reporting and proactive coordination
+  (<strong>hou-ren-sou / 報・連・相</strong> style). Experienced in
+  cross-functional liaison with partner companies and non-technical
+  stakeholders, including handling demanding clients and incident coordination.
+  Value stability, code readability, and preserving working systems over
+  chasing the newest stack.
+
+experience:
+  - company: "LLC YITO"
+    role: "Software Developer · Moscow, Russia"
+    period: "Aug 2023 – Present · 2+ yrs"
+    note: "※ Project details under NDA; achievements sanitized for confidentiality."
+    bullets:
+      - "Designed and built <strong>two production .NET microservices from scratch (0→1 ownership)</strong>: (a) billing & balance accounting service — .NET 10, EF Core 10, audit-grade idempotent APIs keyed by external operation UID, append-only audit log, full transaction version history with delta-only application, decimal (18,4) precision, <strong>110+ NUnit tests</strong>; (b) insurance integration service — .NET, PostgreSQL with auto-migrations, RabbitMQ, SOAP, Docker-based Linux self-contained deployment with its own CI/CD."
+      - "Designed partner-facing integration APIs (REST/SOAP) across multiple financial verticals: 2+ of Russia's largest oil & gas majors and national fuel-card networks; Tier-1 Russian banks (SBER, T-Bank/ROWI) for payment-side flows; insurance provider (AlfaStrakhovanie, OSAGO). Sync pipelines process <strong>~10k transactions per pass</strong> with bulk operations and idempotent delta handling."
+      - "Primary technical liaison with partner engineering teams: API contract negotiation, requirements analysis, troubleshooting, incident coordination, secure data exchange. Identified and resolved cross-system reconciliation discrepancies between accounting and partner records."
+      - "Built infrastructure and CI/CD: Hangfire recurring jobs, Serilog structured logging, Zabbix monitoring, Azure DevOps and TFS pipelines, Kubernetes (overlay dev/prod manifests), Docker, Telegram Bot automation. Maintained the Angular 21 customer portal (standalone components, @ngrx/signals)."
+      - "Tooling discipline: comfortable with modern engineering tooling, including AI-assisted development, while maintaining full code-review responsibility, security awareness, and strict compliance with NDAs and partner data-handling requirements."
+      - "Maintained production reliability while delivering features as the <strong>sole engineer</strong> on the service."
+
+education:
+  - school: "Saratov State Technical University"
+    detail: "BSc, Computer Science & Computing Engineering · Saratov, RU"
+  - school: "Saratov State Technical College"
+    detail: "Computer Network Technician · Saratov, RU"
+
+languages:
+  - name: "Russian"
+    jp: "ロシア語"
+    level: "Native"
+  - name: "English"
+    jp: "英語"
+    level: "B2 / C1 · daily technical use"
+
+japanese:
+  name: "Japanese"
+  jp: "日本語"
+  jlpt:
+    - { level: "N5", state: "passed" }
+    - { level: "N4", state: "passed" }
+    - { level: "N3", state: "target" }
+    - { level: "N2", state: "locked" }
+    - { level: "N1", state: "locked" }
+  note: "Self-study + courses. Targeting <strong>N3 within 12 months</strong>, N2 within 18 months of relocation."
+
+additional:
+  - "Visited Japan: <strong>19 Dec 2025 – 07 Jan 2026 (Tokyo area)</strong> — confirmed cultural fit and motivation to relocate long-term."
+  - "Visa-eligible under the Engineer / Specialist in Humanities / International Services category."
+  - "Available for immediate relocation; references available upon request."
+
+landscape:
+  label: "日本 · NIPPON"
+
+contact:
+  ready: "READY FOR"
+  ready_accent: "TOKYO"
+  ready_jp: "東京へ"
+  email: "reonidok@gmail.com"
+  linkedin: "leonid-kozhanov-072a46404"
+  start: "▶ PRESS START"

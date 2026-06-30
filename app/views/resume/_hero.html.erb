@@ -1,0 +1,26 @@
+<div class="rk-hero">
+  <div class="rk-hero__main">
+    <div class="rk-hero__tag">
+      <span class="rk-hero__tag-dot"></span>RESUME // 履歴書
+    </div>
+
+    <h1 class="rk-hero__name"><%= safe_join(resume.name_lines, tag.br) %><span class="rk-cursor">_</span></h1>
+
+    <div class="rk-hero__rule"></div>
+
+    <p class="rk-hero__role"><%= resume.role %></p>
+    <p class="rk-hero__role-jp"><%= resume.role_jp %></p>
+
+    <div class="rk-hero__badges">
+      <% resume.badges.each do |badge| %>
+        <span class="rk-badge">
+          <% if badge.color.present? %><span class="rk-badge__dot" style="background:<%= badge.color %>;"></span><% end %><%= badge.label %>
+        </span>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="rk-scene-wrap">
+    <%= render "resume/scene" %>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+<section class="rk-section">
+  <%= render "resume/section_header", jp: "技術スタック", en: "SKILLS", wide: true %>
+  <div class="rk-skills">
+    <% skills.each do |card| %>
+      <div class="rk-skill-card">
+        <div class="rk-skill-card__title"><%= card.title %></div>
+        <div class="rk-skill-card__chips">
+          <% Array(card.items).each do |item| %>
+            <span class="rk-skill-chip"><%= item %></span>
+          <% end %>
+          <% Array(card.learning).each do |item| %>
+            <span class="rk-skill-chip rk-skill-chip--learn"><%= item %></span>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</section>

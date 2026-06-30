@@ -1,0 +1,19 @@
+<% content_for :title, "#{@resume.name} · Résumé" %>
+<div class="rk-page">
+  <div class="rk-window">
+    <%= render "resume/titlebar", window: @resume.window %>
+
+    <div class="rk-body">
+      <%= render "resume/hero", resume: @resume %>
+      <%= render "resume/summary", summary: @resume.summary %>
+      <%= render "resume/domain", domain: @resume.domain %>
+      <%= render "resume/skills", skills: @resume.skills %>
+      <%= render "resume/working_style", text: @resume.working_style %>
+      <%= render "resume/experience", experience: @resume.experience %>
+      <%= render "resume/education_languages", resume: @resume %>
+      <%= render "resume/additional", items: @resume.additional %>
+      <%= render "resume/japan_landscape", landscape: @resume.landscape %>
+      <%= render "resume/contact_footer", contact: @resume.contact %>
+    </div>
+  </div>
+</div>

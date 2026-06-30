@@ -1,0 +1,8 @@
+<%# Section header: Japanese label, English label, optional dotted rule. %>
+<div class="rk-section__head<%= " rk-section__head--wide" if local_assigns[:wide] %>">
+  <span class="rk-section__jp"><%= jp %></span>
+  <span class="rk-section__en"><%= en %></span>
+  <% if local_assigns.fetch(:line, true) %>
+    <span class="rk-section__line"></span>
+  <% end %>
+</div>
